@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz Gimnoanima · 21 de novembro</title>
+<meta name="description" content="Inscreve a tua equipa no Quiz Gimnoanima – 21 de novembro, 17h, Pavilhão da Escola Ferreira de Castro, Mem Martins.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Ajusta aqui as cores exatas do clube */
+  --azul:#0a4fa8;
+  --azul-escuro:#07346f;
+  --laranja:#f58220;
+  --laranja-claro:#ffa04d;
+  --fundo:#f4f7fc;
+  --texto:#16233b;
+  --cinza:#6b7a90;
+  --borda:#dbe3f0;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--fundo);color:var(--texto);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--azul-escuro),var(--azul));color:#fff;position:relative;overflow:hidden;padding:72px 0 110px;text-align:center}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:var(--laranja);opacity:.9}
+.hero::before{width:320px;height:320px;right:-110px;top:-120px}
+.hero::after{width:180px;height:180px;left:-70px;bottom:-60px;opacity:.55}
+.hero .wrap{position:relative;z-index:1}
+.badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:6px 16px;border-radius:99px;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(2.4rem,8vw,4.2rem);font-weight:800;line-height:1.05;margin:18px 0 12px}
+h1 span{color:var(--laranja-claro)}
+.hero p.sub{font-size:1.1rem;opacity:.92;max-width:520px;margin:0 auto 28px}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;background:var(--laranja);color:#fff;padding:15px 34px;border-radius:99px;text-decoration:none;box-shadow:0 8px 22px rgba(245,130,32,.45);transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#e6730f}
+
+/* INFO CARDS */
+.info{margin-top:-62px;position:relative;z-index:2}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:#fff;border-radius:var(--radius);padding:22px 18px;box-shadow:0 10px 30px rgba(10,79,168,.10);text-align:center}
+.card .ico{font-size:1.7rem}
+.card b{display:block;font-size:1.05rem;color:var(--azul);margin-top:4px}
+.card small{color:var(--cinza)}
+.card a{text-decoration:none}
+@media(max-width:640px){.cards{grid-template-columns:1fr}}
+
+/* COUNTDOWN */
+.count{display:flex;justify-content:center;gap:12px;margin:34px 0 6px}
+.count div{background:var(--azul);color:#fff;border-radius:14px;padding:12px 0;width:76px;text-align:center}
+.count strong{display:block;font-size:1.7rem;line-height:1.1}
+.count span{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;opacity:.8}
+
+/* FORM */
+section{padding:44px 0}
+h2{font-size:1.8rem;color:var(--azul);margin-bottom:6px}
+.lead{color:var(--cinza);margin-bottom:24px}
+form{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 10px 30px rgba(10,79,168,.10)}
+fieldset{border:0;margin-bottom:26px}
+legend{font-weight:700;font-size:1.05rem;color:var(--azul);margin-bottom:12px;padding-bottom:6px;border-bottom:3px solid var(--laranja);display:inline-block}
+label{display:block;font-weight:600;font-size:.88rem;margin:12px 0 5px}
+label em{color:var(--cinza);font-weight:400;font-style:normal}
+input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1.5px solid var(--borda);border-radius:12px;background:#fff;color:var(--texto);transition:.15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--azul);box-shadow:0 0 0 4px rgba(10,79,168,.12)}
+textarea{resize:vertical;min-height:90px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.row{grid-template-columns:1fr}}
+.member{background:var(--fundo);border-radius:14px;padding:14px 16px;margin-top:12px;border-left:5px solid var(--azul)}
+.member:nth-child(even){border-left-color:var(--laranja)}
+.member h4{font-size:.9rem;color:var(--azul-escuro)}
+.member .row{grid-template-columns:2fr 1fr}
+@media(max-width:640px){.member .row{grid-template-columns:1fr}}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.86rem;margin:10px 0}
+.check input{width:auto;margin-top:5px;accent-color:var(--azul)}
+.note{background:#fff5ea;border-left:5px solid var(--laranja);padding:12px 14px;border-radius:10px;font-size:.85rem;margin-top:12px;display:none}
+.hp{position:absolute;left:-9999px}
+form .btn{width:100%;font-size:1.05rem}
+.msg{display:none;padding:16px;border-radius:12px;margin-top:16px;font-weight:600;text-align:center}
+.msg.ok{display:block;background:#e6f6ec;color:#146c38}
+.msg.err{display:block;background:#fdeaea;color:#a12222}
+
+/* FOOTER */
+footer{background:var(--azul-escuro);color:#fff;text-align:center;padding:34px 20px;font-size:.9rem}
+footer b{color:var(--laranja-claro)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">Gimnoanima apresenta</span>
+    <h1>Quiz <span>Night</span></h1>
+    <p class="sub">Junta a tua equipa, testa os teus conhecimentos e diverte-te numa tarde cheia de perguntas e boa disposição.</p>
+    <a href="#inscricao" class="btn">Inscrever equipa</a>
+  </div>
+</header>
+
+<div class="wrap info">
+  <div class="cards">
+    <div class="card"><div class="ico">📅</div><b>21 de novembro</b><small>Sábado</small></div>
+    <div class="card"><div class="ico">🕔</div><b>17h00</b><small>Início do Quiz</small></div>
+    <div class="card"><div class="ico">📍</div><b><a href="https://www.google.com/maps/search/?api=1&query=Escola+Secund%C3%A1ria+Ferreira+de+Castro+Mem+Martins" target="_blank" rel="noopener">Pavilhão da Escola Ferreira de Castro</a></b><small>Mem Martins</small></div>
+  </div>
+  <div class="count" id="count" aria-label="Contagem decrescente">
+    <div><strong id="d">--</strong><span>dias</span></div>
+    <div><strong id="h">--</strong><span>horas</span></div>
+    <div><strong id="m">--</strong><span>min</span></div>
+    <div><strong id="s">--</strong><span>seg</span></div>
+  </div>
+</div>
+
+<section id="inscricao">
+  <div class="wrap">
+    <h2>Inscrição de equipa</h2>
+    <p class="lead">Equipas de 3 a 5 elementos. Preenche os dados abaixo e entraremos em contacto para confirmar a inscrição.</p>
+
+    <form id="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="Nova inscrição – Quiz Gimnoanima">
+
+      <fieldset>
+        <legend>1. A equipa</legend>
+        <label for="equipa">Nome da equipa</label>
+        <input id="equipa" name="Nome da equipa" required maxlength="60" placeholder="Ex.: Os Sabichões">
+        <label for="n">Número de elementos</label>
+        <select id="n" name="Número de elementos" required>
+          <option value="3">3 elementos</option>
+          <option value="4">4 elementos</option>
+          <option value="5">5 elementos</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Os elementos</legend>
+        <div id="members"></div>
+        <div class="note" id="menores">⚠️ Como há participantes menores de 18 anos, será necessária autorização do encarregado de educação no dia do evento.</div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Contacto do responsável</legend>
+        <label for="resp">Nome do responsável</label>
+        <input id="resp" name="Responsável" required autocomplete="name">
+        <div class="row">
+          <div><label for="email">Email</label><input id="email" type="email" name="email" required autocomplete="email"></div>
+          <div><label for="tel">Telemóvel</label><input id="tel" type="tel" name="Telemóvel" required autocomplete="tel" pattern="[0-9+ ]{9,15}"></div>
+        </div>
+        <label for="orig">Escola / Grupo / Empresa <em>(opcional)</em></label>
+        <input id="orig" name="Origem da equipa" placeholder="De onde vêm?">
+        <label for="obs">Observações <em>(alergias, mobilidade reduzida, outras notas)</em></label>
+        <textarea id="obs" name="Observações"></textarea>
+      </fieldset>
+
+      <label class="check"><input type="checkbox" name="Consentimento fotos" value="Sim"> Autorizo a utilização de fotografias do evento nas redes do clube.</label>
+      <label class="check"><input type="checkbox" name="Consentimento RGPD" value="Sim" required> Aceito que os dados sejam usados apenas para gestão desta inscrição e organização do evento.</label>
+
+      <button class="btn" type="submit" id="btn">Enviar inscrição</button>
+      <div class="msg" id="msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <b>Gimnoanima</b> · Quiz 21 de novembro de 2026 · 17h<br>
+  Pavilhão da Escola Ferreira de Castro, Mem Martins
+</footer>
+
+<script>
+// Elementos dinâmicos
+const AGES=["Até 12 anos","13–17 anos","18–25 anos","26–35 anos","36–50 anos","51–65 anos","Mais de 65 anos"];
+const sel=document.getElementById('n'),box=document.getElementById('members'),nota=document.getElementById('menores');
+function render(){
+  const n=+sel.value;
+  const old=[...box.querySelectorAll('.member')].map(m=>[m.querySelector('input').value,m.querySelector('select').value]);
+  box.innerHTML='';
+  for(let i=1;i<=n;i++){
+    const d=document.createElement('div');d.className='member';
+    d.innerHTML=`<h4>Elemento ${i}</h4><div class="row">
+      <div><label for="nm${i}">Nome completo</label><input id="nm${i}" name="Elemento ${i} - Nome" required maxlength="80"></div>
+      <div><label for="id${i}">Escalão etário</label><select id="id${i}" name="Elemento ${i} - Idade" required>
+      <option value="">Escolher…</option>${AGES.map(a=>`<option>${a}</option>`).join('')}</select></div></div>`;
+    box.appendChild(d);
+    if(old[i-1]){d.querySelector('input').value=old[i-1][0];d.querySelector('select').value=old[i-1][1];}
+  }
+  check();
+}
+function check(){nota.style.display=[...box.querySelectorAll('select')].some(s=>s.value==="Até 12 anos"||s.value==="13–17 anos")?'block':'none';}
+sel.addEventListener('change',render);
+box.addEventListener('change',check);
+render();
+
+// Contagem decrescente
+const alvo=new Date('2026-11-21T17:00:00');
+function tick(){
+  let t=Math.max(0,alvo-new Date());
+  const p=x=>String(x).padStart(2,'0');
+  d.textContent=Math.floor(t/864e5);h.textContent=p(Math.floor(t/36e5)%24);
+  m.textContent=p(Math.floor(t/6e4)%60);s.textContent=p(Math.floor(t/1e3)%60);
+}
+tick();setInterval(tick,1000);
+
+// Envio para Formspree
+const form=document.getElementById('form'),msg=document.getElementById('msg'),btn=document.getElementById('btn');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  btn.disabled=true;btn.textContent='A enviar…';msg.className='msg';
+  try{
+    const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(r.ok){
+      form.reset();render();
+      msg.className='msg ok';msg.textContent='🎉 Inscrição enviada! Entraremos em contacto para confirmar.';
+    }else throw 0;
+  }catch(_){
+    msg.className='msg err';msg.textContent='Ocorreu um erro. Tenta novamente ou contacta o clube.';
+  }
+  btn.disabled=false;btn.textContent='Enviar inscrição';
+});
+</script>
+</body>
+</html>
